@@ -1,0 +1,6 @@
+{% extends "website/base.html" %} 
+{% block title %} Szczegóły spotkania:{{ meeting.title }}{% endblock %}
+{% block content %}
+<h1>{{meeting.title}}</h1>
+<a href="{%url 'welcome' %}">strona głowna</a>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends "website/base.html" %}
+{% block title %}Nowe spotkanie{% endblock %}
+{% block content %}
+    <h1>Planowanie nowego spotkania</h1>
+    <form method="post">
+    <table>
+        {{ form }}
+    </table>
+    {% csrf_token %}
+    <button type="submit">Dodaj</button>
+    </form>
+
+{% endblock %}

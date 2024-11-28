@@ -1,0 +1,19 @@
+{% extends "website/base.html" %}
+{% load static %} 
+{% block title %} witamy{% endblock %}
+    {% block content %}
+<p>Liczba spotkań {{a}}</p>
+
+<ol>
+{% for meeting in meetings %}
+    <li>
+            <a href="{%  url 'detail' meeting.id %}">{{ meeting.title }}</a>
+    </li>
+    <li>
+            <a href="{%  url 'rooms'%}">Zobacz opis pokoi</a>
+    </li>
+{% endfor %}
+</ol>
+<img src="{% static 'website/calendar.png' %}"/>
+        <a href="{% url 'new' %}"> Dodaj nowe spotkanie</a>
+{% endblock %}
